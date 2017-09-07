@@ -43,11 +43,10 @@ app.Animation = (function () {
         tl2.from(atlas, 1, {scale:.7, x:"-=150", y:"-=20", ease: Sine.easeOut}, "+=4")
             .from(tiguan, 1, {scale:.7, x:"+=150", y:"-=20", ease: Sine.easeOut}, "-=.9");
 
-        // TweenMax.set(container,{delay:2, opacity:1});
         TweenMax.to(kick,6,{delay:.5, y:-3420,ease:SteppedEase.config(38)});
 
     }
-
+    
     // --------------------------------------------------------------------------------------
     // Stops the animation
     function stop() {
