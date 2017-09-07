@@ -5,7 +5,7 @@ body {
 }
 
 #banner {
-    background: #FFF;
+    background: #111;
     position: absolute;
     overflow: hidden;
     width: $banner-width;
@@ -62,32 +62,32 @@ body {
     #scene {
         left: 0;
         top: 0;
-        width: 528px;
-        height: $banner-height;
+        width: 300px;
+        height: 190px;
         background: radial-gradient(ellipse at center, rgba(241,241,241,1) 70%,rgba(201,216,226,1) 100%);
         position: absolute;
 
         #container {
-            left: 125px;
-            top: 2px;
-            width: 369px;
-            height: 90px;
+            right: 0;
+            top: 30px;
+            width: 262px;
+            height: 69px;
             overflow: hidden;
             position: absolute;
-            //opacity: 0;
+            //transform: scale(.75) translate3d(0, 0, 0.1px);
         }
 
         #atlas {
-            left: -10px;
-            top: 6px;
-            transform: scale(.9) translate3d(0, 0, 0.1px);
+            left: 0;
+            top: 90px;
+            transform: translate3d(0, 0, 0.1px);
             position: absolute;
         }
 
         #tiguan {
-            right: -10px;
-            top: 8px;
-            transform: scale(.9) translate3d(0, 0, 0.1px);
+            right: 0;
+            top: 93px;
+            transform: translate3d(0, 0, 0.1px);
             position: absolute;
         }
 
@@ -97,8 +97,8 @@ body {
         background: #FFFFFF;
         right: 0;
         bottom: 0;
-        width: 200px;
-        height: $banner-height;
+        width: $banner-width;
+        height: 60px;
         position: absolute;
 
         #cta_arrow {

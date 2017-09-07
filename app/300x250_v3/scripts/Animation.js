@@ -42,12 +42,12 @@ app.Animation = (function () {
             .to(cta_txt, .5, {opacity: 1})
             .to(cta_arrow, .5, {opacity: 1}, "-=.5");
 
-        tl2.from(atlas, 1, {scale:.7, x:"-=150", y:"-=20", ease: Sine.easeOut}, "+=4")
-            .from(tiguan, 1, {scale:.7, x:"+=150", y:"-=20", ease: Sine.easeOut}, "-=.9");
+        tl2.from(atlas, 1, {scale:.8, x:"-=150", y:"-=20", ease: Sine.easeOut}, "+=1.5")
+            .from(tiguan, 1, {scale:.8, x:"+=150", y:"-=20", ease: Sine.easeOut}, "-=.9");
 
-        TweenMax.to(kick,6,{delay:.5, y:-3420,ease:SteppedEase.config(38)});
-        TweenMax.to(container,.5,{delay:4, x:+35, ease: Sine.easeOu});
-
+        TweenMax.to(kick,3,{y:-2484,ease:SteppedEase.config(36)});
+        TweenMax.to(container,.25,{delay:2, scale:1, x:+40, ease: Sine.easeOut});
+        // TweenMax.to(container,1,{delay:2, x:+40, ease: Sine.easeOut});
     }
 
     // --------------------------------------------------------------------------------------
