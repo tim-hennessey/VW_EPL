@@ -62,8 +62,8 @@ app.Animation = (function () {
             .to(tiguan_fWheel, .5, {opacity: 0}, "-=.25")
             .to(tiguan_rWheel, 1, {opacity: 0}, "-=1");
 
-        TweenMax.to(kick,3,{y:-2484,ease:SteppedEase.config(36)});
-        TweenMax.to(container,1,{delay:2, x:+40, ease: Sine.easeOut});
+        TweenMax.to(kick,1.5,{y:-2484,ease:SteppedEase.config(36)});
+        TweenMax.to(container,1,{delay:1, x:+40, ease: Sine.easeOut});
     }
 
     // --------------------------------------------------------------------------------------

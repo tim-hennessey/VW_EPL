@@ -50,7 +50,7 @@ app.Animation = (function () {
             .to(cta_txt, .5, {opacity: 1})
             .to(cta_arrow, .5, {opacity: 1}, "-=.5");
 
-        tl2.from(atlas, 1, {scale:.7, x:"-=150", y:"-=20", ease: Sine.easeOut}, "+=4")
+        tl2.from(atlas, 1, {scale:.7, x:"-=150", y:"-=20", ease: Sine.easeOut}, "+=2")
             .from(atlas_fWheel, 1, {rotation: "-=540", ease: Sine.easeOut}, "-=1")
             .from(atlas_rWheel, 1, {rotation: "-=540", ease: Sine.easeOut}, "-=1")
             .to(atlas_fWheel, .5, {opacity: 0}, "-=.25")
@@ -63,8 +63,8 @@ app.Animation = (function () {
             .to(tiguan_fWheel, .5, {opacity: 0}, "-=.25")
             .to(tiguan_rWheel, 1, {opacity: 0}, "-=1");
 
-        TweenMax.to(kick,6,{delay:.5, y:-3420,ease:SteppedEase.config(38)});
-        TweenMax.to(container,.5,{delay:4, x:+35, ease: Sine.easeOu});
+        TweenMax.to(kick,1.5,{delay:.5, y:-3420,ease:SteppedEase.config(38)});
+        TweenMax.to(container,.5,{delay:1.5, x:+35, ease: Sine.easeOu});
 
     }
 
