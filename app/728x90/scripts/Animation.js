@@ -12,7 +12,11 @@ app.Animation = (function () {
         kick,
         atlas,
         tiguan,
-        container;
+        container,
+        atlas_fWheel,
+        atlas_rWheel,
+        tiguan_fWheel,
+        tiguan_rWheel;;
 
     // --------------------------------------------------------------------------------------
     // set default properties
@@ -28,6 +32,10 @@ app.Animation = (function () {
         atlas = document.getElementById('atlas');
         tiguan = document.getElementById('tiguan');
         container = document.getElementById('container');
+        atlas_fWheel = document.getElementById('atlas_fWheel');
+        atlas_rWheel = document.getElementById('atlas_rWheel');
+        tiguan_fWheel = document.getElementById('tiguan_fWheel');
+        tiguan_rWheel = document.getElementById('tiguan_rWheel');
 
         buttonExit.addEventListener('mouseover', function () {
             TweenMax.to(cta_arrow, .25, {x: 5, ease: Sine.easeOut});
@@ -43,7 +51,17 @@ app.Animation = (function () {
             .to(cta_arrow, .5, {opacity: 1}, "-=.5");
 
         tl2.from(atlas, 1, {scale:.7, x:"-=150", y:"-=20", ease: Sine.easeOut}, "+=4")
-            .from(tiguan, 1, {scale:.7, x:"+=150", y:"-=20", ease: Sine.easeOut}, "-=.9");
+            .from(atlas_fWheel, 1, {rotation: "-=540", ease: Sine.easeOut}, "-=1")
+            .from(atlas_rWheel, 1, {rotation: "-=540", ease: Sine.easeOut}, "-=1")
+            .to(atlas_fWheel, .5, {opacity: 0}, "-=.25")
+            .to(atlas_rWheel, 1, {opacity: 0}, "-=1")
+
+
+            .from(tiguan, 1, {scale: .7, x: "+=150", y: "-=20", ease: Sine.easeOut}, "-=.9")
+            .from(tiguan_fWheel, 1, {rotation: "+=540", ease: Sine.easeOut}, "-=1")
+            .from(tiguan_rWheel, 1, {rotation: "+=540", ease: Sine.easeOut}, "-=1")
+            .to(tiguan_fWheel, .5, {opacity: 0}, "-=.25")
+            .to(tiguan_rWheel, 1, {opacity: 0}, "-=1");
 
         TweenMax.to(kick,6,{delay:.5, y:-3420,ease:SteppedEase.config(38)});
         TweenMax.to(container,.5,{delay:4, x:+35, ease: Sine.easeOu});
