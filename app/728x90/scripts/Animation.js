@@ -54,14 +54,14 @@ app.Animation = (function () {
             .from(atlas_fWheel, 1, {rotation: "-=540", ease: Sine.easeOut}, "-=1")
             .from(atlas_rWheel, 1, {rotation: "-=540", ease: Sine.easeOut}, "-=1")
             .to(atlas_fWheel, .5, {opacity: 0}, "-=.25")
-            .to(atlas_rWheel, 1, {opacity: 0}, "-=1")
+            .to(atlas_rWheel, 1, {opacity: 0}, "-=.5")
 
 
             .from(tiguan, 1, {scale: .7, x: "+=150", y: "-=20", ease: Sine.easeOut}, "-=.9")
             .from(tiguan_fWheel, 1, {rotation: "+=540", ease: Sine.easeOut}, "-=1")
             .from(tiguan_rWheel, 1, {rotation: "+=540", ease: Sine.easeOut}, "-=1")
             .to(tiguan_fWheel, .5, {opacity: 0}, "-=.25")
-            .to(tiguan_rWheel, 1, {opacity: 0}, "-=1");
+            .to(tiguan_rWheel, 1, {opacity: 0}, "-=.5");
 
         TweenMax.to(kick,1.5,{delay:.5, y:-3420,ease:SteppedEase.config(38)});
         TweenMax.to(container,.5,{delay:1.5, x:+35, ease: Sine.easeOu});
